@@ -1,0 +1,89 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>
+
+  <appSettings>
+    <add key="SecurityKey" value="IT"/>
+    <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
+    
+    <!--<add key="IBU_USER_DOC" value="C:\\inetpub\\wwwroot\\Lgarda\\LgurdaService\\LgurdaService\\User_Doc\\" />-->
+    <add key="IBU_USER_DOC" value="C:\\inetpub\\wwwroot\\Lgarda\\LgurdaService\\LgurdaService\\User_Doc\\" />
+
+    <add key="OTP_MAIL_SUBJECT" value="FSIBL Agent Banking OTP Token" />
+    <add key="PASSWORD_CHANGE_MAIL_SUBJECT" value="Password Changed for Logon" /> <!--to FSIBL Agent Banking-->
+    <add key="USER_CREATE_MAIL_SUBJECT" value="Profile has already created. Find your user id and password" />
+    <add key="DOMAIN_NAME" value="LEADSOFT.BIZ" />
+    <add key="AD_ENABLE_FLAG" value="0" />
+  </appSettings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.5" />
+    <httpRuntime targetFramework="4.5"/>
+  </system.web>
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, set the values below to false before deployment -->
+          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true"/>
+          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+
+        <behavior name="LgurdaBehavior">
+          <serviceMetadata httpGetEnabled="true"/>
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+      </serviceBehaviors>
+      <endpointBehaviors>
+        <behavior name="RestServiceEndpointBehaviour">
+          <webHttp helpEnabled="true" defaultOutgoingResponseFormat="Xml" automaticFormatSelectionEnabled="true"/>
+        </behavior>
+      </endpointBehaviors>
+
+    </behaviors>
+    <protocolMapping>
+        <add binding="basicHttpsBinding" scheme="https" />
+    </protocolMapping>
+
+    <services>
+      <service name="LgurdaService.LgurdaService" behaviorConfiguration="LgurdaBehavior">
+        <endpoint address="soap" name="basicHttpBindingSOAP" binding="basicHttpBinding" contract="LgurdaService.ILgurdaService" />
+        <endpoint address="" binding="webHttpBinding" contract="LgurdaService.ILgurdaService" bindingConfiguration="RestServiceBindingConfig" behaviorConfiguration="RestServiceEndpointBehaviour"/>
+        <endpoint address="mex" name="MetaDatawsHttpEndpoint" binding="mexHttpBinding"  contract="IMetadataExchange"/>
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost/LgurdaService"/>
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+    <bindings>
+      <webHttpBinding>
+        <!--default value 65,536 bytes-->                               <!--byte-->
+        <binding name="RestServiceBindingConfig" maxReceivedMessageSize="10485760">
+          <security mode="None"/>
+        </binding>
+      </webHttpBinding>
+    </bindings>
+
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+    <!--
+        To browse web app root directory during debugging, set the value below to true.
+        Set to false before deployment to avoid disclosing web app folder information.
+      -->
+    <directoryBrowse enabled="true"/>
+  </system.webServer>
+
+  <connectionStrings>
+    <!--<add name="application" connectionString="data source=budev;user id=lgarda;password=lgarda2013;" />-->
+                                                         
+    <add name="DBModelEntities" connectionString="metadata=res://*/EDMX.DBModel.csdl|res://*/EDMX.DBModel.ssdl|res://*/EDMX.DBModel.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;data source=BUDEV;password=lgarda2013;user id=LGARDA&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+
+</configuration>

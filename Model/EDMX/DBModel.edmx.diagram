@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="39ab761da526453ea7506c5716a25f53" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="DB_Model.LG_SYS_BRANCH_HOME_BANK" Width="1.5" PointX="20.125" PointY="0.5" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_AREA" Width="1.5" PointX="13.375" PointY="0.5" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_CLASSIFACTION" Width="1.5" PointX="13.375" PointY="3.875" />
+        <AssociationConnector Association="DB_Model.FK_LG_USER_AREA_01" />
+        <EntityTypeShape EntityType="DB_Model.LG_AA_NFT_AUTH_LOG_DTLS" Width="1.5" PointX="24.5" PointY="3" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_PASS_HISTORY" Width="1.5" PointX="17.5" PointY="8.375" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_ROLE" Width="1.5" PointX="11.25" PointY="0.5" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_ROLE_PERMISSION" Width="1.5" PointX="4.75" PointY="8.125" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_ROLE_PERMISSION_DETAILS" Width="1.5" PointX="6.875" PointY="8.75" />
+        <EntityTypeShape EntityType="DB_Model.LG_SYS_FAILED_LOGIN_ATTEMPT" Width="1.5" PointX="19.625" PointY="8.375" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_ROLE_DEFINE" Width="1.5" PointX="9" PointY="0.5" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_ROLE_ASSIGN" Width="1.5" PointX="11.25" PointY="3.875" />
+        <AssociationConnector Association="DB_Model.FK_LG_FNR_ROLE_DEFINE_01" />
+        <EntityTypeShape EntityType="DB_Model.LG_2FA_OTP_CONFIG" Width="1.5" PointX="2.625" PointY="4.25" />
+        <EntityTypeShape EntityType="DB_Model.LG_2FA_TOKEN_GEN_LOG" Width="1.5" PointX="2.625" PointY="8.125" />
+        <EntityTypeShape EntityType="DB_Model.LG_CRD_PASSWORD_POLICY" Width="1.5" PointX="11.25" PointY="8.125" />
+        <EntityTypeShape EntityType="DB_Model.LG_SYS_MAIL_SERVER_CONFIG" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_INFO" Width="1.5" PointX="0.5" PointY="4.25" />
+        <EntityTypeShape EntityType="DB_Model.LG_AA_NFT_AUTH_LOG_VAL" Width="1.5" PointX="24.5" PointY="0.5" />
+        <EntityTypeShape EntityType="DB_Model.LG_CRD_ADC_SMS_MSG" Width="1.5" PointX="21.625" PointY="8.375" />
+        <EntityTypeShape EntityType="DB_Model.LG_AA_NFT_AUTH_LOG" Width="1.5" PointX="22.25" PointY="0.75" />
+        <AssociationConnector Association="DB_Model.FK_LG_AA_NFT_AUTH_LOG_DTLS" />
+        <AssociationConnector Association="DB_Model.FK_LG_AA_NFT_AUTH_LOG_VAL" />
+        <EntityTypeShape EntityType="DB_Model.LG_AA_AUTHENTICATION_TYPE" Width="1.5" PointX="20.125" PointY="4" />
+        <EntityTypeShape EntityType="DB_Model.LG_2FA_OTP_SMS_MSG" Width="1.5" PointX="0.5" PointY="8.25" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_FILE_TYPE" Width="1.5" PointX="23.625" PointY="8.375" />
+        <EntityTypeShape EntityType="DB_Model.LG_ERROR_LOG" Width="1.5" PointX="25.75" PointY="8.375" />
+        <EntityTypeShape EntityType="DB_Model.LG_SYS_CLD_TYPE" Width="1.5" PointX="26.625" PointY="0.5" />
+        <EntityTypeShape EntityType="DB_Model.LG_SYS_CLD_HOLIDAY_TYPE" Width="1.5" PointX="5.375" PointY="11.75" />
+        <EntityTypeShape EntityType="DB_Model.LG_SYS_HOLIDAY_MARKING" Width="1.5" PointX="28.875" PointY="3.875" />
+        <AssociationConnector Association="DB_Model.FK_LG_SYS_HOLIDAY_MARKING_01" />
+        <AssociationConnector Association="DB_Model.FK_LG_SYS_HOLIDAY_MARKING_02" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_CLASS_AREA_FUNCTION" Width="1.5" PointX="15.625" PointY="2.25" />
+        <AssociationConnector Association="DB_Model.FK_LG_USER_CLASS_AREA_FUNC_02" />
+        <AssociationConnector Association="DB_Model.FK_LG_USER_CLASS_AREA_FUNC_01" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_FUNCTION_GROUP" Width="1.5" PointX="9.125" PointY="11.125" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_AD_BINDING" Width="1.5" PointX="0.5" PointY="13" />
+        <EntityTypeShape EntityType="DB_Model.LG_SYS_SESSION_TRACKER" Width="1.5" PointX="13.375" PointY="8.375" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_APPLICATION_TYPE" Width="1.5" PointX="22.25" PointY="5.625" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_APPLICATION" Width="1.5" PointX="2.625" PointY="0.5" />
+        <AssociationConnector Association="DB_Model.FK_LG_2FA_OTP_CONFIG_02" />
+        <AssociationConnector Association="DB_Model.FK_LG_2FA_TOKEN_GEN_LOG" />
+        <AssociationConnector Association="DB_Model.FK_LG_SYS_MAIL_SERVER_CONFIG01" />
+        <AssociationConnector Association="DB_Model.FK_PK_LG_FNR_APPLICATION01" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_SERVICE" Width="1.5" PointX="4.625" PointY="0.5" />
+        <AssociationConnector Association="DB_Model.FK_LG_FNR_SERVICE_01" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_MODULE" Width="1.5" PointX="4.75" PointY="4.375" />
+        <EntityTypeShape EntityType="DB_Model.LG_FNR_FUNCTION" Width="1.5" PointX="6.875" PointY="0.5" />
+        <AssociationConnector Association="DB_Model.FK_LG_FNR_ROLE_DEFINE_02" />
+        <AssociationConnector Association="DB_Model.FK_LG_FNR_ROLE_PERMISSION_DTL1" />
+        <AssociationConnector Association="DB_Model.FK_LG_USER_CLASS_AREA_FUNC_03" />
+        <AssociationConnector Association="DB_Model.FK_PK_LG_FNR_FUNCTION_GROUP_01" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_FILES" Width="1.5" PointX="15.5" PointY="8.375" />
+        <EntityTypeShape EntityType="DB_Model.LG_MENU_TEMP" Width="1.5" PointX="13.375" PointY="12.75" />
+        <EntityTypeShape EntityType="DB_Model.LG_MENU" Width="1.5" PointX="27.75" PointY="8.375" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_ACTIVITY_LOG" Width="1.5" PointX="7.375" PointY="14.75" />
+        <EntityTypeShape EntityType="DB_Model.LG_USER_SETUP_PROFILE" Width="1.5" PointX="31.625" PointY="0.625" />
+        <AssociationConnector Association="DB_Model.FK_LG_USER_SETUP_PROFILE_02" />
+        <AssociationConnector Association="DB_Model.FK_LG_USER_SETUP_PROFILE_03" />
+        <AssociationConnector Association="DB_Model.FK_LG_USER_SETUP_PROFILE_01" />
+        <AssociationConnector Association="DB_Model.FK_LG_USER_SETUP_PROFILE_04" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

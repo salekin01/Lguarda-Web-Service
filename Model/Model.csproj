@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41966DA3-5D73-4FEE-8AAC-E4BB34FEE570}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveDirectory">
+      <HintPath>..\LgurdaService\bin\ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EDMX\DBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\DBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\DBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_2FA_OTP_CONFIG.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_2FA_OTP_SMS_MSG.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_2FA_TOKEN_GEN_LOG.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_AA_AUTHENTICATION_TYPE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_AA_NFT_AUTH_LOG.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_AA_NFT_AUTH_LOG_DTLS.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_AA_NFT_AUTH_LOG_VAL.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_CRD_ADC_SMS_MSG.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_CRD_PASSWORD_POLICY.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_ERROR_LOG.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_APPLICATION.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_APPLICATION_TYPE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_FUNCTION.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_FUNCTION_GROUP.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_MODULE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_ROLE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_ROLE_DEFINE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_ROLE_PERMISSION.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_ROLE_PERMISSION_DETAILS.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_FNR_SERVICE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_MENU.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_MENU_TEMP.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_SYS_BRANCH_HOME_BANK.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_SYS_CLD_HOLIDAY_TYPE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_SYS_CLD_TYPE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_SYS_FAILED_LOGIN_ATTEMPT.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_SYS_HOLIDAY_MARKING.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_SYS_MAIL_SERVER_CONFIG.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_SYS_SESSION_TRACKER.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_ACTIVITY_LOG.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_AD_BINDING.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_AREA.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_CLASSIFACTION.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_CLASS_AREA_FUNCTION.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_FILES.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_FILE_TYPE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_INFO.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_PASS_HISTORY.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_ROLE_ASSIGN.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMX\LG_USER_SETUP_PROFILE.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Common\BanglaToUnicodeConverter.cs" />
+    <Compile Include="EntityModel\Common\BooleanConversion.cs" />
+    <Compile Include="EntityModel\Common\Bool_Check.cs" />
+    <Compile Include="EntityModel\Common\CryptoEngine.cs" />
+    <Compile Include="EntityModel\Common\DropDown.cs" />
+    <Compile Include="EntityModel\Common\ExceptionExtendedMethods.cs" />
+    <Compile Include="EntityModel\Common\LS_EMail.cs" />
+    <Compile Include="EntityModel\Common\OutgoingResponseFormat.cs" />
+    <Compile Include="EntityModel\Common\Pass_Encryp.cs" />
+    <Compile Include="EntityModel\Common\Security.cs" />
+    <Compile Include="EntityModel\Common\SMS_API.cs" />
+    <Compile Include="EntityModel\LGModel\LG_2FA_OTP_CONFIG_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_2FA_TOKEN_GEN_LOG_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_AA_NFT_AUTH_LOG_DTLS_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_AA_NFT_AUTH_LOG_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_AA_NFT_AUTH_LOG_VAL_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_CRD_PASSWORD_MODIFY_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_CRD_PASSWORD_POLICY_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_ERROR_LOG_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_FNR_APPLICATION_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_FNR_FUNCTION_GROUP_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_FNR_FUNCTION_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_FNR_MODULE_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_FNR_ROLE_DEFINE_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_FNR_ROLE_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_FNR_ROLE_PERMISSION_DETAILS_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_FNR_ROLE_PERMISSION_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_FNR_SERVICE_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_MENU_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_REPORT_MANU_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_SYS_CLD_TYPE_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_SYS_FAILED_LOGIN_ATTEPT.cs" />
+    <Compile Include="EntityModel\LGModel\LG_SYS_HOLIDAY_MARKING_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_SYS_HOLIDAY_TYPE_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_SYS_LOGIN.cs" />
+    <Compile Include="EntityModel\LGModel\LG_SYS_MAIL_SERVER_CONFIG_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_SYS_SESSION_TRACKER_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_USER_ACTIVITY_LOG_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_USER_AD_BINDING_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_USER_FILE_UPLOAD_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_USER_MANDATE_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_USER_ROLE_ASSIGN_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\LG_USER_SETUP_PROFILE_MAP.cs" />
+    <Compile Include="EntityModel\LGModel\Test.cs" />
+    <Compile Include="EntityModel\TwoFactorAuth\OTP.cs" />
+    <Compile Include="EntityModel\TwoFactorAuth\RSA_AUTHENTICATION.cs" />
+    <Compile Include="EntityModel\TwoFactorAuth\TwoFactorAuthentication.cs" />
+    <Compile Include="Mapper\ClassConversion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="EDMX\DBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="EDMX\DBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+      <LastGenOutput>DBModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EDMX\DBModel.edmx.diagram">
+      <DependentUpon>DBModel.edmx</DependentUpon>
+    </None>
+    <None Include="EDMX\DBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+      <LastGenOutput>DBModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
